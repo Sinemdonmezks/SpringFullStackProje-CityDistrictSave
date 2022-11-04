@@ -1,0 +1,30 @@
+body{
+    background-image: linear-gradient( to right, #ffddfb,#cbfff6);
+
+}
+.baslik{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+header h1{
+    font-family:'Comic Sans MS';
+    font-size:50px;
+    text-decoration:solid;
+    background-color:rgb(255, 203, 184);
+    border-radius: 40px;
+    padding:0 2rem;
+
+}
+
+.liste{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left:  10rem;
+    margin-right: 10rem;
+}

@@ -1,0 +1,13 @@
+header h1{
+    font-family:'Comic Sans MS';
+    font-size:50px;
+    text-decoration:solid;
+}
+body{
+    background-image: url('/ciity.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}

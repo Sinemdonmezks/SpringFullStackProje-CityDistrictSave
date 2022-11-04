@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> İl İlçe Listesi </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/cityList.css">
+</head>
+<body>
+    <div class="baslik">
+    <header class="text-center text-black ">
+        <h1> Kaydedilen Tüm Liste</h1>
+    </header>
+    </div>
+    <form action="cityListPage" name="cityForm" method="get">
+    <div class=" liste " >
+
+        <table class="w-100 table table-striped">
+            <thead>
+            <tr>
+                <th class="text-center" scope="col">İd</th>
+                <th class="text-center" scope="col"> İl </th>
+                <th class="text-center" scope="col"> İlçe </th>
+                <th class="text-center" scope="col"> Bölge </th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="city :${cities}">
+                <th class="text-center" th:text="${city.id}" scope="row"></th>
+                <td class="text-center" th:text="${city.city}" ></td>
+                <td class="text-center" th:text="${city.district}" ></td>
+                <td class="text-center" th:text="${city.region}" ></td>
+            </tr>
+        </tbody>
+
+        </table>
+    </div>
+    </form>
+</body>
+</html>
